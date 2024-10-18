@@ -152,8 +152,13 @@ experimento/Inference/output/
 
 CCT/checkpoint/
 
-datasets/CityScapesBrazil/train/
-datasets/CityScapesBrazil/test/
+datasets/CityScapesBrazil/train/Curitiba
+datasets/CityScapesBrazil/train/Fortaleza
+datasets/CityScapesBrazil/train/RiodeJaneiro
+datasets/CityScapesBrazil/train/RioGrandeDoSul
+datasets/CityScapesBrazil/train/RodoviasNordesteSul
+datasets/CityScapesBrazil/train/SaoPaulo
+
 
 datasets/CityScapeData/gtFine/
 
