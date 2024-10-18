@@ -171,3 +171,5 @@ datasets/GTA5Dataset/images/
 datasets/GTA5Dataset/labels/
 
 pixmatch/checkpoint/
+
+CCT/modelsaved

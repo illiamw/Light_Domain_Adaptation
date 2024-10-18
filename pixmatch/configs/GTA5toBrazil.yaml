@@ -1,0 +1,83 @@
+
+name: GTA5ToBrazil
+root: C:\Users\will_\OneDrive\Documentos\GitHub\Light_Domain_Adaptation
+train: True
+seed: 42
+wandb: False
+
+data:
+
+  num_classes: 3
+
+  source:
+    dataset: 'gta5'
+    kwargs:
+      root: ${root}\datasets\GTA5Dataset
+      list_path: ${root}\datasets\GTA5Dataset\gta5_list
+      base_size: [1280, 720]
+      crop_size: [1280, 720]
+      random_mirror: True
+      random_crop: False
+      resize: True
+      gaussian_blur: True
+      class_16: False
+
+  target:
+    dataset: 'brazil'
+    kwargs:
+      root: ${root}\datasets\CityScapesBrazil
+      list_path: ${root}\datasets\CityScapesBrazil\brazil_list\Cidades
+      base_size: [512, 368]
+      crop_size: [512, 368]
+      random_mirror: True
+      random_crop: False
+      resize: True
+      gaussian_blur: True
+      class_16: False
+      class_13: False
+
+  loader:
+    kwargs:
+      batch_size: 3
+      num_workers: 4
+      pin_memory: True
+
+  source_val_iterations: 1000000
+
+model:
+  backbone: LiteSeg
+  imagenet_pretrained: ${root}\pixmatch\pretrained\mobilenetv2_weights.pth
+  checkpoint: C:\Users\will_\OneDrive\Documentos\GitHub\Light_Domain_Adaptation\pixmatch\checkpoint\GTA5ToBrazil_epoca_74.pth
+  resume_from_checkpoint: True
+
+opt:
+  kind: "SGD"
+  momentum: 0.9
+  weight_decay: 4e-4
+  lr: 1e-7
+  iterations: 169700
+  poly_power: 0.9
+
+# For auxiliary mode output
+aux: False
+lam_aux: 0.1
+
+# Exponential weighted average of model parameters
+ema_decay: 0.999
+
+# Perturbations
+pseudolabel_threshold: 0.0
+lam_aug: 0.15
+lam_squaremax: 0.05
+lam_fourier: 0.0
+lam_cutmix: 0.0
+
+# Fourier
+source_fourier: False
+fourier_beta: 0.01
+
+# Validadação a cada X epocas
+val_per_epoc: 1
+
+# save checkpoint a cada x epocasc
+save_per_epoc: 1
