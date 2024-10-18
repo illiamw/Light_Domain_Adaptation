@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>seg results</title>
+  </head>
+  <body>
+    <h3>Experiment name: CCT_V1_VAL_D2, Date: 09-12_19-31</h3>
+    <h3>Configs</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <td>Epochs : 40</td>
+          <td>Lr scheduler : Poly</td>
+          <td>Lr : 0.01</td>
+          <td>Decoders : Vat 2 Dropout 6 Cutout 6
+                                     FeatureNoise 6 FeatureDrop 6
+                                     ContextMsk 2 ObjMsk 2</td>
+        </td>
+      </tr>
+    </table>
+    <p>{
+    &quot;augment&quot;: true,
+    &quot;base_size&quot;: 720,
+    &quot;blur&quot;: true,
+    &quot;crop_size&quot;: 576,
+    &quot;data_dir&quot;: &quot;C:/Users/will_/OneDrive/Documentos/GitHub/Light_Domain_Adaptation/datasets/GTA5Dataset&quot;,
+    &quot;flip&quot;: true,
+    &quot;ignore_index&quot;: -1,
+    &quot;mean&quot;: [
+        0.485,
+        0.456,
+        0.406
+    ],
+    &quot;n_labeled_examples&quot;: 17188,
+    &quot;rotate&quot;: true,
+    &quot;scale&quot;: true,
+    &quot;split&quot;: &quot;train_supervised&quot;,
+    &quot;std&quot;: [
+        0.229,
+        0.224,
+        0.225
+    ]
+}</p>
+    <hr>
+    <hr>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <td>Epoch : 6</td>
+          <td>Mean_IoU : 0.817</td>
+          <td>PixelAcc : 0.943</td>
+          <td>Val Loss : 0.20141</td>
+        </td>
+      </tr>
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <td>Epoch : 11</td>
+          <td>Mean_IoU : 0.797</td>
+          <td>PixelAcc : 0.934</td>
+          <td>Val Loss : 0.2239</td>
+        </td>
+      </tr>
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <td>Epoch : 16</td>
+          <td>Mean_IoU : 0.816</td>
+          <td>PixelAcc : 0.942</td>
+          <td>Val Loss : 0.18671</td>
+        </td>
+      </tr>
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <td>Epoch : 21</td>
+          <td>Mean_IoU : 0.812</td>
+          <td>PixelAcc : 0.941</td>
+          <td>Val Loss : 0.21986</td>
+        </td>
+      </tr>
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <td>Epoch : 26</td>
+          <td>Mean_IoU : 0.694</td>
+          <td>PixelAcc : 0.869</td>
+          <td>Val Loss : 0.44043</td>
+        </td>
+      </tr>
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <td>Epoch : 31</td>
+          <td>Mean_IoU : 0.798</td>
+          <td>PixelAcc : 0.938</td>
+          <td>Val Loss : 0.218</td>
+        </td>
+      </tr>
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <td>Epoch : 36</td>
+          <td>Mean_IoU : 0.776</td>
+          <td>PixelAcc : 0.914</td>
+          <td>Val Loss : 0.27584</td>
+        </td>
+      </tr>
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <td>Epoch : 41</td>
+          <td>Mean_IoU : 0.799</td>
+          <td>PixelAcc : 0.928</td>
+          <td>Val Loss : 0.24181</td>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
