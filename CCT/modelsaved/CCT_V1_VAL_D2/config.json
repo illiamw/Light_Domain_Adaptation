@@ -1,0 +1,182 @@
+{
+    "bases": false,
+    "diff_lrs": true,
+    "experim_name": "CCT_V1_VAL_D2",
+    "ignore_index": -1,
+    "lr_scheduler": "Poly",
+    "model": {
+        "aux_constraint": false,
+        "aux_constraint_w": 1,
+        "confidence_masking": false,
+        "confidence_th": 0.5,
+        "context_masking": 2,
+        "cutout": 6,
+        "drop": 6,
+        "drop_rate": 0.5,
+        "eps": 2.0,
+        "erase": 0.4,
+        "feature_drop": 6,
+        "feature_noise": 6,
+        "object_masking": 2,
+        "semi_1": false,
+        "semi_2": true,
+        "softmax_temp": 1,
+        "spatial": true,
+        "sup_loss": "CE",
+        "supervised_1": true,
+        "supervised_2": false,
+        "supervised_w": 1,
+        "uda": true,
+        "un_loss": "MSE",
+        "uniform_range": 0.3,
+        "vat": 2,
+        "xi": 1e-06
+    },
+    "n_gpu": 1,
+    "n_labeled_examples": 17188,
+    "name": "CCT_V1_VAL_D2",
+    "optimizer": {
+        "args": {
+            "lr": 0.01,
+            "momentum": 0.9,
+            "weight_decay": 0.0001
+        },
+        "type": "SGD"
+    },
+    "pretrained": true,
+    "ramp_up": 0.1,
+    "sup_val_loader_1": {
+        "data_dir": "C:/Users/will_/OneDrive/Documentos/GitHub/Light_Domain_Adaptation/datasets/GTA5Dataset",
+        "ignore_index": -1,
+        "mean": [
+            0.485,
+            0.456,
+            0.406
+        ],
+        "split": "val",
+        "std": [
+            0.229,
+            0.224,
+            0.225
+        ],
+        "val": true
+    },
+    "sup_val_loader_2": {
+        "data_dir": "C:/Users/will_/OneDrive/Documentos/GitHub/Light_Domain_Adaptation/datasets/CityScapeData",
+        "ignore_index": -1,
+        "mean": [
+            0.485,
+            0.456,
+            0.406
+        ],
+        "split": "val",
+        "std": [
+            0.229,
+            0.224,
+            0.225
+        ],
+        "val": true
+    },
+    "train_supervised_1": {
+        "augment": true,
+        "base_size": 720,
+        "blur": true,
+        "crop_size": 576,
+        "data_dir": "C:/Users/will_/OneDrive/Documentos/GitHub/Light_Domain_Adaptation/datasets/GTA5Dataset",
+        "flip": true,
+        "ignore_index": -1,
+        "mean": [
+            0.485,
+            0.456,
+            0.406
+        ],
+        "n_labeled_examples": 17188,
+        "rotate": true,
+        "scale": true,
+        "split": "train_supervised",
+        "std": [
+            0.229,
+            0.224,
+            0.225
+        ]
+    },
+    "train_supervised_2": {
+        "augment": true,
+        "base_size": 640,
+        "blur": true,
+        "crop_size": 512,
+        "data_dir": "C:/Users/will_/OneDrive/Documentos/GitHub/Light_Domain_Adaptation/datasets/CityScapeData",
+        "flip": true,
+        "ignore_index": -1,
+        "mean": [
+            0.485,
+            0.456,
+            0.406
+        ],
+        "n_labeled_examples": 17188,
+        "rotate": true,
+        "scale": true,
+        "split": "train_supervised",
+        "std": [
+            0.229,
+            0.224,
+            0.225
+        ]
+    },
+    "train_unsupervised_2": {
+        "augment": true,
+        "base_size": 368,
+        "blur": false,
+        "crop_size": 294,
+        "data_dir": "C:/Users/will_/OneDrive/Documentos/GitHub/Light_Domain_Adaptation/datasets/CityScapesBrazil",
+        "flip": true,
+        "ignore_index": -1,
+        "mean": [
+            0.485,
+            0.456,
+            0.406
+        ],
+        "n_labeled_examples": 17188,
+        "rotate": false,
+        "scale": true,
+        "split": "train_unsupervised",
+        "std": [
+            0.229,
+            0.224,
+            0.225
+        ]
+    },
+    "trainer": {
+        "early_stop": 10,
+        "epochs": 40,
+        "log_dir": "C:/Users/will_/OneDrive/Documentos/GitHub/Light_Domain_Adaptation/experimento/Metrics/Metrics/CCT",
+        "log_per_iter": 20,
+        "monitor": "max Mean_IoU",
+        "save_dir": "C:/Users/will_/OneDrive/Documentos/GitHub/Light_Domain_Adaptation/CCT/modelsaved",
+        "save_period": 1,
+        "tensorboardX": true,
+        "val": true,
+        "val_per_epochs": 5
+    },
+    "uda": true,
+    "un_val_loader_2": {
+        "data_dir": "C:/Users/will_/OneDrive/Documentos/GitHub/Light_Domain_Adaptation/datasets/CityScapesBrazil",
+        "ignore_index": -1,
+        "mean": [
+            0.485,
+            0.456,
+            0.406
+        ],
+        "split": "val",
+        "std": [
+            0.229,
+            0.224,
+            0.225
+        ],
+        "val": true
+    },
+    "unsupervised_w": 30,
+    "use_weak_lables": false,
+    "versionmode": 1,
+    "weakly_loss_w": 0.4
+}
