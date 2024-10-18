@@ -10,12 +10,7 @@ wandb
 pretrained/*
 !pretrained/download.sh
 logs/*/*/*.pth
-datasets/Cityscapes
-datasets/GTA5
-datasets/SYNTHIA
-datasets/CrossCity
-datasets/Synscapes
-datasets/NTHU_Datasets
+
 tmp
 .ipynb_checkpoints
 */.ipynb_checkpoints
@@ -142,7 +137,6 @@ data/
 input/
 saved/
 outputs/
-datasets/
 
 # editor, os cache directory
 .vscode/
@@ -157,6 +151,9 @@ experimento/Inference/output/
 
 
 CCT/checkpoint/
+
+datasets/CityScapesBrazil/train/
+datasets/CityScapesBrazil/test/
 
 datasets/CityScapeData/gtFine/
 
