@@ -94,7 +94,7 @@ Params: <N>M
 
 #### Citação   
 ```bibtex
-@inproceedings{ferreira2024LDA,
+@misc{ferreira2024LDA,
   author    = {William Luis Alves Ferreira},
   title     = {Um estudo experimental sobre aplicação prática de métodos de deep
 learning à segmentação semântica de áreas navegáveis e não

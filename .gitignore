@@ -152,8 +152,6 @@ experimento/Inference/output/
 
 CCT/checkpoint/
 
-datasets/CityScapesBrazil/train/Curitiba
-
 datasets/CityScapeData/gtFine/
 
 datasets/CityScapeData/leftImg8bit/
