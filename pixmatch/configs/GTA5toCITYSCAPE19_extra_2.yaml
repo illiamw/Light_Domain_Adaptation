@@ -47,7 +47,7 @@ data:
 model:
   backbone: LiteSeg
   imagenet_pretrained: ${root}\pixmatch\pretrained\mobilenetv2_weights.pth
-  checkpoint: C:\Users\will_\OneDrive\Documentos\GitHub\Light_Domain_Adaptation\pixmatch\checkpoint\GTA5ToCityscape19_extra_epoca_39.pth
+  checkpoint: C:\Users\will_\OneDrive\Documentos\GitHub\Light_Domain_Adaptation\pixmatch\checkpoint\GTA5ToCityscape19_extra_epoca_88.pth
   resume_from_checkpoint: True
 
 opt:
@@ -55,7 +55,7 @@ opt:
   momentum: 0.9
   weight_decay: 5e-4
   lr: 1e-4 
-  iterations: 100000
+  iterations: 150000
   poly_power: 0.9
   
 

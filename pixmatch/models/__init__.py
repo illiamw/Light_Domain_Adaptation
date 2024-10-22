@@ -12,5 +12,5 @@ def get_model(cfg):
         raise NotImplementedError()
     return model, params
 
-def get_model_test():
-    return LiteSeg()
+def get_model_test(n):
+    return LiteSeg(n_classes=n)
